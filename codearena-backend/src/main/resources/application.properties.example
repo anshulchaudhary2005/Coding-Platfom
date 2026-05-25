@@ -1,0 +1,18 @@
+spring.application.name=codearena-backend
+server.port=8080
+
+## Database Config
+spring.datasource.url=jdbc:postgresql://localhost:5432/codearena?sslmode=disable
+spring.datasource.username=YOUR_DATABASE_USERNAME
+spring.datasource.password=YOUR_DATABASE_PASSWORD
+
+# --- HIBERNATE SETTINGS ---
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# --- AI SECURITY ---
+# You can set the GEMINI_API_KEY environment variable or paste your key here.
+gemini.api.key=${GEMINI_API_KEY:YOUR_GEMINI_API_KEY}
+
+spring.datasource.hikari.data-source-properties.ssl=true
